@@ -6,6 +6,7 @@ import {
   amountAdded,
   decremented,
   incremented,
+  resetCounter,
 } from './features/counter/counterSlice';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
   function handleDecremented() {
     dispatch(decremented());
   }
+  function handleReset() {
+    dispatch(resetCounter());
+  }
 
   return (
     <div className='App'>
@@ -31,6 +35,7 @@ function App() {
           <button onClick={handleIncremented}>incremented</button>
           <button onClick={handleIncremented3}>incremented3</button>
           <button onClick={handleDecremented}>decremented</button>
+          <button onClick={handleReset}>resetCounter</button>
         </p>
       </header>
     </div>
